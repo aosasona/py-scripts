@@ -1,0 +1,31 @@
+[project]
+name = "scripts"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Ayodeji O", email = "97124713+aosasona@users.noreply.github.com" }
+]
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "requests>=2.31.0",
+    "selenium>=4.18.1",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[project.scripts]
+scripts = "scripts:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scripts"]
